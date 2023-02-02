@@ -8,10 +8,42 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="355"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
+        <TabControl>
+            <TabItem>
+                <TabItem.Header>
+                    <Label Content="Catagory"></Label>
+                </TabItem.Header>
+                <Label Content="Items Go Here ......"/>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Label Content="Catagory"></Label>
+                </TabItem.Header>
+                <Label Content="Items Go Here ......"/>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Label Content="Catagory"></Label>
+                </TabItem.Header>
+                <Label Content="Items Go Here ......"/>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Label Content="Catagory"></Label>
+                </TabItem.Header>
+                <Label Content="Items Go Here ......"/>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Label Content="Catagory"></Label>
+                </TabItem.Header>
+                <Label Content="Items Go Here ......"/>
+            </TabItem>
+        </TabControl>
         <StackPanel x:Name="commandBar" Grid.Column="2">
             <Button x:Name="btnVoid" Content="Void" Margin="10" Height="30"></Button>
             <Button x:Name="btnVoidAll" Content="Void All" Margin="10" Height="30"></Button>
@@ -55,13 +87,5 @@
             </Grid>
             <Button Grid.Row="3" Content="Subtotal : €0.00"></Button>
         </Grid>
-        <TabPanel x:Name="TpItems">
-            <TabItem Header="Items 1" Width="auto" Height="30"></TabItem>
-            <TabItem Header="Items 2" Width="auto" Height="30"></TabItem>
-            <TabItem Header="Items 3" Width="auto" Height="30"></TabItem>
-            <TabItem Header="Items 4" Width="auto" Height="30"></TabItem>
-            <TabItem Header="Items 5" Width="auto" Height="30"></TabItem>
-            <TabItem Header="Items 6" Width="auto" Height="30"></TabItem>
-        </TabPanel>
     </Grid>
 </Window>
