@@ -25,16 +25,40 @@ namespace project
             InitializeComponent();
         }
 
-        private void btnNum_Click(object sender, RoutedEventArgs e)
+        private void btnNum_Click(object sender, RoutedEventArgs e) //Checks What Number Was Selected And Inputs To TextBlock
         {
-            var btn = sender as Button;
-            int inputNum = int.Parse((string)btn.Content);
+            Button btn = sender as Button;
+            int inputNum = int.Parse(btn.Content.ToString());
             TbNumIn.Text = TbNumIn.Text + $"{inputNum}";
         }
 
-        private void btnClear_Click(object sender, RoutedEventArgs e)
+        private void btnClear_Click(object sender, RoutedEventArgs e) //Clears TextBlock
         {
             TbNumIn.Text = string.Empty;
+        }
+
+        private void btnSignOff_Click(object sender, RoutedEventArgs e) //Sign Off Account - Will Change It To Check User Id Once User Class Set Up
+        {
+            int userInput = 0;
+            int userId = 69;
+            string idIncorrect = "Inncorrect Id Entered Please Try Again";
+            if (TbNumIn.Text != string.Empty)
+            {
+                userInput = int.Parse(TbNumIn.Text.ToString());
+                if (userId == userInput)//Need to add open login screen when set up
+                    Close();
+                else
+                {
+                    MessageBox.Show(idIncorrect);
+                    TbNumIn.Text = string.Empty;
+                }
+                    
+            }
+            else
+            {
+                MessageBox.Show(idIncorrect);
+                TbNumIn.Text = string.Empty;
+            }
         }
     }
 }

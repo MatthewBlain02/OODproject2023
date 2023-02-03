@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="BLAIN POS" MinHeight="450" MinWidth="800" MaxHeight="600" MaxWidth="1000">
     <Grid>
+        <!-- Defining Rows For Main Grid-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="355"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
+        <!-- Items Tabs-->
         <TabControl>
             <TabItem>
                 <TabItem.Header>
@@ -44,11 +46,13 @@
                 <Label Content="Items Go Here ......"/>
             </TabItem>
         </TabControl>
+        <!-- Sidebar Commands-->
         <StackPanel x:Name="commandBar" Grid.Column="2">
             <Button x:Name="btnVoid" Content="Void" Margin="10" Height="30"></Button>
             <Button x:Name="btnVoidAll" Content="Void All" Margin="10" Height="30"></Button>
-            <Button x:Name="btnSignOff" Content="Sign Off" Margin="10" Height="30"></Button>
+            <Button x:Name="btnSignOff" Content="Sign Off" Margin="10" Height="30" Click="btnSignOff_Click"></Button>
         </StackPanel>
+        <!-- Middle Grid -->
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -56,8 +60,11 @@
                 <RowDefinition Height="150"/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
+            <!-- Listbox For Cart -->
             <ListBox x:Name="LbxCart"></ListBox>
+            <!-- TextBox For Displaying Inputed Numbers-->
             <TextBlock x:Name="TbNumIn" Grid.Row="1" Background="#f0f0f0" FontSize="19"></TextBlock>
+            <!-- Grid For Numbers, C, X and Enter Buttons-->
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -85,7 +92,9 @@
                 <Button x:Name="btnMulti" Content="X" Grid.Column="3" Grid.Row="1"></Button>
                 <Button x:Name="btnEnter" Content="ENTER" Grid.Column="4" Grid.RowSpan="3"></Button>
             </Grid>
+            <!-- Subtotal Button-->
             <Button Grid.Row="3" Content="Subtotal : €0.00"></Button>
         </Grid>
+        
     </Grid>
 </Window>
