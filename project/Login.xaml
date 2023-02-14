@@ -1,4 +1,4 @@
-﻿<Window x:Class="project.Window1"
+﻿<Window x:Class="project.Login"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -16,14 +16,14 @@
         <StackPanel Grid.Row="1">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="ID : "></TextBlock>
-                <TextBox Width="100"></TextBox>
+                <TextBox x:Name="tbxID" Width="100"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
                 <TextBlock Text="Pin : "></TextBlock>
-                <PasswordBox Width="95"></PasswordBox>
+                <PasswordBox x:Name="pwbPW" Width="95"></PasswordBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                <Button Content="Login" Margin="10" Width="60"/>
+                <Button Content="Login" Margin="10" Width="60" Click="Button_Click_1"/>
                 <Button Content="Exit" Margin="10" Width="60" Click="Button_Click"/>
             </StackPanel>
         </StackPanel>
