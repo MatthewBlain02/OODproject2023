@@ -20,6 +20,7 @@ namespace project
     /// </summary>
     public partial class MainWindow : Window
     {
+        Login log = new Login();
         public MainWindow()
         {
             InitializeComponent();
@@ -45,8 +46,12 @@ namespace project
             if (TbNumIn.Text != string.Empty)
             {
                 userInput = int.Parse(TbNumIn.Text.ToString());
-                if (userId == userInput)//Need to add open login screen when set up
+                if (userId == userInput)
+                {
+                    log.Show();
                     Close();
+                }
+                    
                 else
                 {
                     MessageBox.Show(idIncorrect);
