@@ -21,6 +21,7 @@ namespace project
     public partial class MainWindow : Window
     {
         Login log = new Login();
+        public User user = new User(0,"default",123,false);
         public MainWindow()
         {
             InitializeComponent();
@@ -41,7 +42,7 @@ namespace project
         private void btnSignOff_Click(object sender, RoutedEventArgs e) //Sign Off Account - Will Change It To Check User Id Once User Class Set Up
         {
             int userInput = 0;
-            int userId = 69;
+            int userId = user.Id;
             string idIncorrect = "Inncorrect Id Entered Please Try Again";
             if (TbNumIn.Text != string.Empty)
             {

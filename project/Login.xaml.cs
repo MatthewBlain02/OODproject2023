@@ -50,31 +50,7 @@ namespace project
             int inputId = int.Parse(tbxID.Text);
             int inputPw = int.Parse(pwbPW.Password);
             string errorMessage = "Sorry Incorrect Id / Pin Entered";
-            //foreach (var user in users)
-            //{
-            //    if(inputId == user.Id)
-            //    {
-            //        if(inputPw == user.Password)
-            //        {
-            //            MainWindow main = new MainWindow();
-            //            main.Show();
-            //            Close();
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show(errorMessage);
-            //            tbxID.Text = String.Empty;
-            //            pwbPW.Password = null;
-            //        }
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show(errorMessage);
-            //        tbxID.Text = String.Empty;
-            //        pwbPW.Password = null;
-            //    }
-            //    break;
-            //}
+
             var checklogin = from user in users
                               where inputId == user.Id && inputPw == user.Password
                               select user;
@@ -82,6 +58,7 @@ namespace project
             if (u != null)
             {
                 MainWindow main = new MainWindow();
+                main.user= u;
                 main.Show();
                 Close();
             }
